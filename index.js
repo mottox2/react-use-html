@@ -1,5 +1,10 @@
 const { useMemo } = require("react");
-const parse = require("html-react-parser");
+const {
+  default: parse,
+  attributesToProps,
+  domToReact,
+  Element,
+} = require("html-react-parser");
 
 exports.useHtml = (html, components) => {
   const elements = useMemo(() => {
