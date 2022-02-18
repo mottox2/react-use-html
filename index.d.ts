@@ -8,5 +8,6 @@ declare type Components = Record<
 >;
 export declare const useHtml: (
   html: string,
-  components: Components
+  components: Components,
+  methods: any
 ) => string | JSX.Element | JSX.Element[];
