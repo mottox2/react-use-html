@@ -11,6 +11,7 @@ exports.useHtml = (html, components, methods = {}) => {
     const options = {
       replace: (node) => {
         if (!(node instanceof Element) || typeof node === "string") return node;
+        // FIXME: Rename to attrs
         const props = attributesToProps(node.attribs);
         const children = domToReact(node.children, options);
         const render = components[node.name];
